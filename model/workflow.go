@@ -93,9 +93,8 @@ type BaseWorkflow struct {
 	// +optional
 	DataInputSchema *DataInputSchema `json:"dataInputSchema,omitempty"`
 	// Serverless Workflow schema version
-	// +kubebuilder:validation:Required
 	// +kubebuilder:default="0.8"
-	SpecVersion string `json:"specVersion" validate:"required"`
+	SpecVersion string `json:"specVersion"`
 	// Secrets allow you to access sensitive information, such as passwords, OAuth tokens, ssh keys, etc,
 	// inside your Workflow Expressions.
 	// +optional
